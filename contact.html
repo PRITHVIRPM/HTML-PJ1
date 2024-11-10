@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <meta name="description" content="Get in touch with Concert Ticket Booking for any inquiries or assistance.">
+    <style>
+        body {
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        header {
+            background: #000000;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px; 
+            position: relative; 
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+            
+        header a:hover {
+            transform: scale(1.1); 
+            color: #46a049; 
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #contact-info {
+            background:#46a049 ;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-details {
+            margin: 20px 0;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        form input, form textarea {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #35424a;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            #contact-info {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <a href="index.html">Home</a>
+    </header>
+
+    <main>
+        <section id="contact-info">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or need assistance, feel free to contact us!</p>
+
+            <div class="contact-details">
+                <p><strong>Phone:</strong> +91-9632458665</p>
+                <p><strong>Email:</strong> matrix@concertbooking.com</p>
+            </div>
+
+            <div class="image-container">
+                <img src="your-image.jpg" alt="A friendly team ready to assist you" />
+            </div>
+
+            <form>
+                <h3>Contact Form</h3>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Concert Ticket Booking. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

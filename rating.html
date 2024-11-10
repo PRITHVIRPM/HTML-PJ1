@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Rating & Feedback</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* Resetting Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #f3f4f9, #e0e6f1);
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+            background: url(https://i.pinimg.com/564x/fc/98/ad/fc98ad723fdaca45ef0c89738cea3669.jpg)no-repeat center center/cover;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        /* Star Rating */
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 3rem;
+            color: #ffffff;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .star-rating label:before {
+            content: '★';
+        }
+
+        .star-rating input:checked ~ label {
+            color: gold;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: gold;
+        }
+
+        
+        .concert-tag {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .concert-tag label {
+            font-size: 1.3rem;
+            color: #ffffff;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .concert-tag input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: border 0.3s ease;
+        }
+
+        .concert-tag input:focus {
+            border: 2px solid #007BFF;
+            outline: none;
+        }
+
+       
+        .feedback {
+            max-width: 500px;
+            margin: 0 auto 40px;
+            text-align: left;
+        }
+
+        .feedback label {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feedback textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 150px;
+            transition: border 0.3s ease;
+        }
+
+        .feedback textarea:focus {
+            border: 2px solid #007BFF;
+            outline: none;
+        }
+
+       
+        .submit-button {
+            padding: 15px 30px;
+            font-size: 1.3rem;
+            background-color: #46a049;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #000000;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 10px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .star-rating {
+                font-size: 2.5rem;
+            }
+
+            .concert-tag input,
+            .feedback textarea {
+                font-size: 1rem;
+            }
+
+            .submit-button {
+                font-size: 1.1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Concert Rating & Feedback</h1>
+    </header>
+
+    <div class="concert-tag">
+        <label for="concertName">Concert Name:</label>
+        <input type="text" id="concertName" placeholder="Enter concert name" required>
+    </div>
+
+    <div class="star-rating">
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1"></label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2"></label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3"></label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4"></label>
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5"></label>
+    </div>
+
+    <div class="feedback">
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" placeholder="Share your thoughts..."></textarea>
+    </div>
+
+    <button class="submit-button">Submit</button>
+
+    <footer>
+        <p>Thank you for your feedback!</p>
+    </footer>
+
+</body>
+</html>

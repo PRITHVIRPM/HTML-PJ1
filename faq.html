@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - Concert Website</title>
+    <style>
+        body {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000;
+        }
+
+        .nav {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+            padding: 10px 15px;
+            position: relative;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .nav a:hover {
+            transform: scale(1.1); 
+            color: #46a049; 
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #46a049;
+            left: 50%;
+            bottom: 0;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .faq {
+            max-width: 600px;
+            text-align: left;
+            background: #46a049;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .faq-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .faq-question::before {
+            content: '▼';
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+            color: #000000;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .faq-answer.show {
+            display: block;
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="faq">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">What is the age limit for attending concerts?</h3>
+            <p class="faq-answer">Most concerts are all-ages events, but some may have age restrictions. Please check the specific event details for age requirements.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">Can I bring my own food and drinks?</h3>
+            <p class="faq-answer">Generally, outside food and drinks are not allowed. However, some venues may have specific policies, so it's best to check beforehand.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">What should I do if I lost my tickets?</h3>
+            <p class="faq-answer">If you lose your tickets, please contact customer support for assistance. Be sure to provide your order details for verification.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">Is there parking available at the venue?</h3>
+            <p class="faq-answer">Most venues offer parking, but availability may vary. We recommend arriving early or considering public transportation options.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">What time do doors open for the concert?</h3>
+            <p class="faq-answer">Doors usually open 1-2 hours before the concert starts. Please check the event details for specific times.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
